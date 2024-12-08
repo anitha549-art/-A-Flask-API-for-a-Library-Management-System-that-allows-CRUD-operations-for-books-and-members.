@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+</head>
+<body>
+    <h1>Library Dashboard</h1>
+    <h2>Books List</h2>
+    <ul>
+        {% for book in books %}
+        <li>{{ book[1] }} by {{ book[2] }} (Published: {{ book[3] }})</li>
+        {% else %}
+        <li>No books available.</li>
+        {% endfor %}
+    </ul>
+    <h2>Members List</h2>
+    <ul>
+        {% for member in members %}
+        <li>{{ member[1] }} (Email: {{ member[2] }}, Joined: {{ member[3] }})</li>
+        {% else %}
+        <li>No members available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
